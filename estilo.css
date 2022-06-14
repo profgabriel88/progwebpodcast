@@ -1,0 +1,39 @@
+#tabela {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.episodios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.episodios img {
+    max-width: 100%;
+}
+
+.retorno {
+    /* border: 1px solid #000; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 15rem;
+    margin: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.25rem;
+    /* overflow:hidden */
+}
+
+.retornoImg {
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
