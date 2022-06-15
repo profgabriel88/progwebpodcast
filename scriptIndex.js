@@ -47,7 +47,7 @@ function montaRecomendados() {
                     <a 
                         href="podcast/podcast.html?var=${r.id}" 
                         target="_blank"
-                        ><button class="btn btn-warning my-2">${r.title}</button></a>`;
+                        ><button class="btn btn-warning my-2 ">${r.title}</button></a>`;
 
         div.innerHTML = html;
         recomendado.appendChild(div);
