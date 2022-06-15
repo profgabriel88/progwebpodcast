@@ -12,22 +12,27 @@
     <title>PodRequests</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <input id="busca" type="text" class="form-control" placeholder="Buscar podcasts...">
-            </div>
-            <div class="col-md-2">
-                <button 
-                    onclick="buscarCanais();"
-                    class="btn btn-outline-primary">
-                    <i class="bi bi-search me-2"></i>
-                    Pesquisar
-                </button>
-            </div>
+    <nav class="navbar bg-black shadow-sm sticky-top">
+        <div class="container-fluid ms-3">
+            <a class="navbar-brand text-warning" href="#">
+                <i class="bi bi-speaker-fill"></i>
+                PodRequests
+            </a>
         </div>
+    </nav>
+    <div class="row mt-4 ms-2">
+        <div class="col-md-6">
+            <input id="busca" type="text" class="form-control" placeholder="Buscar podcasts..." onkeyup="buscarCanais()">
+        </div>
+        <div class="col-md-2">
+            <button onclick="buscarCanais();" class="btn btn-outline-dark">
+                <i class="bi bi-search me-2"></i>
+                Pesquisar
+            </button>
+        </div>
+    </div>
+    <div class="container">    
         <div id="tabela">
-
         </div>
     </div>
 </body>
