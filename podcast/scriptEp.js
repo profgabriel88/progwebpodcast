@@ -74,7 +74,7 @@ function montaEps() {
     retornoPodcast.forEach(e => {
 
         let titulo = document.createElement('h3');
-        titulo.className = 'mt-4'
+        titulo.className = 'mt-4 alert alert-warning text-black'
         titulo.innerHTML = e.title;
         
         let data = document.createElement('p');
