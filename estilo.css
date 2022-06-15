@@ -30,7 +30,7 @@ body {
     width: 15rem;
     height: 15rem;
     margin: 4rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rubik', Courier, monospace;
     font-size: 1.25rem;
     /* overflow:hidden */
 }
@@ -40,8 +40,4 @@ body {
     height: 15rem;
     padding: 1rem;
     border-radius: 50%;
-}
-
-.rubik {
-    font-family: 'Rubik', sans-serif;
 }

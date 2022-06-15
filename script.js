@@ -30,7 +30,7 @@ function montaTabela() {
                     <a 
                         href="podcast.html?var=${r.urls.web_url}" 
                         target="_blank"
-                        ><button class="btn btn-warning mt-2 rubik">${r.title}</button></a>`;
+                        ><button class="btn btn-warning mt-2">${r.title}</button></a>`;
 
         div.innerHTML = html;
         tabela.appendChild(div);
