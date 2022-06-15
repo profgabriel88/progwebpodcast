@@ -13,9 +13,9 @@
     <script src="scriptIndex.js" defer></script>
     <link rel="stylesheet" href="./estilo.css">
     <title>PodRequests</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-<<<<<<< Updated upstream
     <nav class="navbar bg-black shadow-sm sticky-top">
         <div class="container-fluid ms-3">
             <a class="navbar-brand text-warning" href="#">
@@ -32,7 +32,8 @@
         <div class="col-md-2">
             <button onclick="buscarCanais();" class="btn btn-outline-dark">
                 <i class="bi bi-search me-2"></i>
-                Pesquisar
+                     Pesquisar
+
             </button>
         </div>
     </div>
@@ -43,83 +44,9 @@
         <hr> 
         <h2 id="tituloBusca" class="mt-2" style="display: none;">Sua busca</h2>
         <div id="tabela">
-=======
-    <nav class="my-navbar">
-        <h2>Podcasts</h2>
-        <a href="/" class="btn">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-compass"
-            viewBox="0 0 16 16"
-            >
-            <path
-                d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
-            />
-            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
-            </svg>
-            <b>Explorar</b>
-        </a>
-        <a href="" class="btn">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-compass"
-            viewBox="0 0 16 16"
-            >
-            <path
-                d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
-            />
-            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
-            </svg>
-            <b>Inscrições</b>
-        </a>
-        <a href="" class="btn">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-compass"
-            viewBox="0 0 16 16"
-            >
-            <path
-                d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
-            />
-            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
-            </svg>
-            <b>Favoritos</b>
-        </a>
-        <a href="" class="btn">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-compass"
-            viewBox="0 0 16 16"
-            >
-            <path
-                d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016zm6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
-            />
-            <path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
-            </svg>
-            <b>Playlists</b>
-        </a>
-    </nav>
-
-    <div class="container">
-        <img class="search" src="imagens/search.png" id="imagem" alt="buscar"/> 
-        <div id="divBusca">             
-            <input type="text" id="txtBusca" placeholder="Busque podcasts, criadores de conteúdo..."/>
-        </div>
-    </div>
-    <div class="conteudo">
-        <b id = "txtConteudo">Em alta</b>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+
 </html>
