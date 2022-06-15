@@ -43,11 +43,11 @@ function montaRecomendados() {
         let div = document.createElement('div');
         div.className = 'retornoslides'
 
-        let html = `<img class="retornoImg" src="${r.urls.logo_image.original}"></img>
+        let html = `<img class="retornoImg shadow-lg mb-2" src="${r.urls.logo_image.original}"></img>
                     <a 
                         href="podcast.html?var=${r.id}" 
                         target="_blank"
-                        ><button class="btn btn-warning mt-2">${r.title}</button></a>`;
+                        ><button class="btn btn-warning my-2">${r.title}</button></a>`;
 
         div.innerHTML = html;
         recomendado.appendChild(div);
@@ -88,11 +88,11 @@ function montaTabela() {
         let div = document.createElement('div');
         div.className = 'retorno'
 
-        let html = `<img class="retornoImg shadow-lg" src="${r.urls.logo_image.original}"></img>
+        let html = `<img class="retornoImg shadow-lg mb-2" src="${r.urls.logo_image.original}"></img>
                     <a 
                         href="podcast.html?var=${r.id}" 
                         target="_blank"
-                        ><button class="btn btn-warning mt-2">${r.title}</button></a>`;
+                        ><button class="btn btn-warning my-2">${r.title}</button></a>`;
 
         div.innerHTML = html;
         tabela.appendChild(div);
