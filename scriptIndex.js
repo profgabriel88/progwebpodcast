@@ -35,8 +35,8 @@ function montaRecomendados() {
     next.className = 'next';
     prev.setAttribute('onclick', 'plusSlides(-1)');
     next.setAttribute('onclick', 'plusSlides(1)');
-    prev.innerHTML = '&#10094;'
-    next.innerHTML = '&#10095;'
+    prev.innerHTML = '<i class="bi bi-chevron-left"></i>'
+    next.innerHTML = '<i class="bi bi-chevron-right"></i>'
 
     recomendado.appendChild(prev);
     retornoRecomendados.forEach((r, index) => {
