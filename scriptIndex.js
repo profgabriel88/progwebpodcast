@@ -5,7 +5,11 @@ var retornoBusca = [];
 var retornoPodcast = [];
 var retornoRecomendados = [];
 var podcastUrl = '';
-var slideIndex = 1;
+var slideIndex = 0;
+var tamSlide = 1;
+var slideInicial = 1;
+var slideFinal = 1;
+var offset = 2;
 
 podcastsRecomendados();
 function podcastsRecomendados() {
@@ -23,7 +27,18 @@ function podcastsRecomendados() {
 
 function montaRecomendados() {
     let recomendado = document.getElementById('recomendado');
-    recomendado.innerHTML = '';
+    // recomendado.innerHTML = '';
+
+    let prev = document.createElement('a');
+    let next = document.createElement('a');
+    prev.className = 'prev';
+    next.className = 'next';
+    prev.setAttribute('onclick', 'plusSlides(-1)');
+    next.setAttribute('onclick', 'plusSlides(1)');
+    prev.innerHTML = '&#10094;'
+    next.innerHTML = '&#10095;'
+
+    recomendado.appendChild(prev);
     retornoRecomendados.forEach((r, index) => {
         let div = document.createElement('div');
         div.className = 'retornoslides'
@@ -32,21 +47,17 @@ function montaRecomendados() {
                     <a 
                         href="podcast.html?var=${r.id}" 
                         target="_blank"
-                        ><button>${r.title}</button></a>`;
+                        ><button class="btn btn-warning mt-2">${r.title}</button></a>`;
 
         div.innerHTML = html;
         recomendado.appendChild(div);
     })
 
-    let prev = document.createElement('div');
-    let next = document.createElement('div');
-    prev.innerHTML = '<a class="prev" onclick="plusSlides(-1)">&#10094;</a>'
-    next.innerHTML = '<a class="next" onclick="plusSlides(1)">&#10095;</a>'
-
-    recomendado.appendChild(prev);
     recomendado.appendChild(next);
-
     
+    tamSlide = retornoRecomendados.length-1;
+    slideInicial = 0;
+    slideFinal = tamSlide - 3;
     showSlides(slideIndex);
 }
 
@@ -67,8 +78,12 @@ function buscarCanais() {
 }
 
 function montaTabela() {
+    let tituloBusca = document.getElementById('tituloBusca');
+    tituloBusca.style.display = 'block';
+
     let tabela = document.getElementById('tabela');
     tabela.innerHTML = '';
+
     retornoBusca.forEach((r, index) => {
         let div = document.createElement('div');
         div.className = 'retorno'
@@ -86,22 +101,33 @@ function montaTabela() {
 
 // Next/previous controls
 function plusSlides(n) {
+    offset += n;
+    slideInicial += n;
   showSlides(slideIndex += n);
 }
 
 // Thumbnail image controls
 function currentSlide(n) {
+    offset -= n;
+    slideInicial -= n;
   showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("retornoslides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+
+  if(slideInicial < 0) {slideInicial = 0; offset = 2;}
+  if(offset > tamSlide) {offset = tamSlide; slideInicial = tamSlide-2;}
+
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    if (i >= slideInicial && i <= offset )
+        slides[i].style.display = 'block';
+    else
+        slides[i].style.display = 'none';
   }
 
-    slides[slideIndex-1].style.display = "block";
+
+
+    // slides[slideIndex-1].style.display = "block";
 }

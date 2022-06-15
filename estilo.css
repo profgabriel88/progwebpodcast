@@ -21,16 +21,14 @@ body {
     max-width: 100%;
 }
 
-.recomendados {
+#recomendado {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
     width: 100%;
-    position: relative;
     margin: auto;
-    border: 1px solid #000;
 }
 
 .retornoslides {
@@ -41,14 +39,14 @@ body {
     width: 15rem;
     height: 15rem;
     margin: 4rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Rubik', Courier, monospace;
     font-size: 1.25rem;
     display: none;
 }
 
 .prev, .next {
     cursor: pointer;
-    position: absolute;
+    position: sticky;
     top: 50%;
     width: auto;
     margin-top: -22px;
@@ -63,6 +61,10 @@ body {
 
 .next {
     right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.left {
+    left: 0;
     border-radius: 3px 0 0 3px;
 }
 
