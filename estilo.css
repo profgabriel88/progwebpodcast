@@ -1,3 +1,7 @@
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
 #tabela {
     display: flex;
     flex-direction: row;
@@ -36,4 +40,8 @@
     height: 15rem;
     padding: 1rem;
     border-radius: 50%;
+}
+
+.rubik {
+    font-family: 'Rubik', sans-serif;
 }
