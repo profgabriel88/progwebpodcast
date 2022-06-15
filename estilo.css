@@ -10,22 +10,6 @@ body {
     flex-wrap: wrap;
 }
 
-#boom {
-    text-decoration: none;
-    color: #696969;
-}
-
-.episodios {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.episodios img {
-    max-width: 100%;
-}
-
 #recomendado {
     display: flex;
     flex-direction: row;
