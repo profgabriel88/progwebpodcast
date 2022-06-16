@@ -1,0 +1,19 @@
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+#boom {
+    text-decoration: none;
+    color: #696969;
+}
+
+.episodios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.episodios img {
+    max-width: 100%;
+}

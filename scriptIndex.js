@@ -35,8 +35,8 @@ function montaRecomendados() {
     next.className = 'next';
     prev.setAttribute('onclick', 'plusSlides(-1)');
     next.setAttribute('onclick', 'plusSlides(1)');
-    prev.innerHTML = '&#10094;'
-    next.innerHTML = '&#10095;'
+    prev.innerHTML = '<i class="bi bi-chevron-left"></i>'
+    next.innerHTML = '<i class="bi bi-chevron-right"></i>'
 
     recomendado.appendChild(prev);
     retornoRecomendados.forEach((r, index) => {
@@ -45,7 +45,7 @@ function montaRecomendados() {
 
         let html = `<img class="retornoImg shadow-lg mb-2" src="${r.urls.logo_image.original}"></img>
                     <a 
-                        href="podcast.html?var=${r.id}" 
+                        href="podcast/podcast.html?var=${r.id}" 
                         target="_blank"
                         ><button class="btn btn-warning my-2 ">${r.title}</button></a>`;
 
@@ -90,7 +90,7 @@ function montaTabela() {
 
         let html = `<img class="retornoImg shadow-lg mb-2" src="${r.urls.logo_image.original}"></img>
                     <a 
-                        href="podcast.html?var=${r.id}" 
+                        href="podcast/podcast.html?var=${r.id}" 
                         target="_blank"
                         ><button class="btn btn-warning my-2">${r.title}</button></a>`;
 
